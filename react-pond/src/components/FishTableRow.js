@@ -1,12 +1,14 @@
+import FishTable from './FishTable.js'
+
 class FishTableRow extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       showDescription: false
     };
   }
 
-  // Currently, the image being displayed is hardcoded from tinyurl.com 
+  // Currently, the image being displayed is hardcoded from tinyurl.com
   render() {
     return (
       <tr onClick={() => this.setState({showDescription: !this.state.showDescription})}>
@@ -29,3 +31,4 @@ FishTableRow.propTypes = {
 // In the ES6 spec, files are "modules" and do not share a top-level scope
 // `var` declarations will only exist globally where explicitly defined
 window.FishTableRow = FishTableRow;
+export default FishTableRow
